@@ -44,10 +44,7 @@ endif()
 
 # Debug: no optimisation, full debug info, sanitizers
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    add_compile_options(-O0 -g3)
-    # Address + UB sanitizers — extremely helpful during development
-    add_compile_options(-fsanitize=address,undefined)
-    add_link_options   (-fsanitize=address,undefined)
+    add_compile_options(-O0 -g)
 endif()
 
 # ─────────────────────────────────────────────────────────────────────────────

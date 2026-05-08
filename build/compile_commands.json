@@ -1,43 +1,43 @@
 [
 {
   "directory": "/Users/abhigyansinha/CVM++/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined -o CMakeFiles/cvm.dir/src/main.cpp.o -c /Users/abhigyansinha/CVM++/src/main.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g -o CMakeFiles/cvm.dir/src/main.cpp.o -c /Users/abhigyansinha/CVM++/src/main.cpp",
   "file": "/Users/abhigyansinha/CVM++/src/main.cpp",
   "output": "CMakeFiles/cvm.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/abhigyansinha/CVM++/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined -o CMakeFiles/cvm.dir/src/lexer.cpp.o -c /Users/abhigyansinha/CVM++/src/lexer.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g -o CMakeFiles/cvm.dir/src/lexer.cpp.o -c /Users/abhigyansinha/CVM++/src/lexer.cpp",
   "file": "/Users/abhigyansinha/CVM++/src/lexer.cpp",
   "output": "CMakeFiles/cvm.dir/src/lexer.cpp.o"
 },
 {
   "directory": "/Users/abhigyansinha/CVM++/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined -o CMakeFiles/cvm.dir/src/ast.cpp.o -c /Users/abhigyansinha/CVM++/src/ast.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g -o CMakeFiles/cvm.dir/src/ast.cpp.o -c /Users/abhigyansinha/CVM++/src/ast.cpp",
   "file": "/Users/abhigyansinha/CVM++/src/ast.cpp",
   "output": "CMakeFiles/cvm.dir/src/ast.cpp.o"
 },
 {
   "directory": "/Users/abhigyansinha/CVM++/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined -o CMakeFiles/cvm.dir/src/parser.cpp.o -c /Users/abhigyansinha/CVM++/src/parser.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g -o CMakeFiles/cvm.dir/src/parser.cpp.o -c /Users/abhigyansinha/CVM++/src/parser.cpp",
   "file": "/Users/abhigyansinha/CVM++/src/parser.cpp",
   "output": "CMakeFiles/cvm.dir/src/parser.cpp.o"
 },
 {
   "directory": "/Users/abhigyansinha/CVM++/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined -o CMakeFiles/cvm.dir/src/bytecode.cpp.o -c /Users/abhigyansinha/CVM++/src/bytecode.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g -o CMakeFiles/cvm.dir/src/bytecode.cpp.o -c /Users/abhigyansinha/CVM++/src/bytecode.cpp",
   "file": "/Users/abhigyansinha/CVM++/src/bytecode.cpp",
   "output": "CMakeFiles/cvm.dir/src/bytecode.cpp.o"
 },
 {
   "directory": "/Users/abhigyansinha/CVM++/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined -o CMakeFiles/cvm.dir/src/compiler.cpp.o -c /Users/abhigyansinha/CVM++/src/compiler.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g -o CMakeFiles/cvm.dir/src/compiler.cpp.o -c /Users/abhigyansinha/CVM++/src/compiler.cpp",
   "file": "/Users/abhigyansinha/CVM++/src/compiler.cpp",
   "output": "CMakeFiles/cvm.dir/src/compiler.cpp.o"
 },
 {
   "directory": "/Users/abhigyansinha/CVM++/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined -o CMakeFiles/cvm.dir/src/vm.cpp.o -c /Users/abhigyansinha/CVM++/src/vm.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15  -I/Users/abhigyansinha/CVM++/src -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g -o CMakeFiles/cvm.dir/src/vm.cpp.o -c /Users/abhigyansinha/CVM++/src/vm.cpp",
   "file": "/Users/abhigyansinha/CVM++/src/vm.cpp",
   "output": "CMakeFiles/cvm.dir/src/vm.cpp.o"
 }

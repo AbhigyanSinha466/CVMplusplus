@@ -12,7 +12,6 @@
 		[
 			"add_executable",
 			"install",
-			"add_link_options",
 			"add_compile_options",
 			"target_include_directories"
 		],
@@ -28,29 +27,23 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 69,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 98,
+				"line" : 95,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 50,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
 				"line" : 31,
 				"parent" : 0
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 0,
 				"line" : 47,
 				"parent" : 0
@@ -58,13 +51,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 49,
-				"parent" : 0
-			},
-			{
-				"command" : 4,
-				"file" : 0,
-				"line" : 71,
+				"line" : 68,
 				"parent" : 0
 			}
 		]
@@ -83,46 +70,42 @@
 					"fragment" : "-g -std=c++17 -arch arm64"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"fragment" : "-Wpedantic"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"fragment" : "-Wconversion"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"fragment" : "-Wshadow"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"fragment" : "-Wno-unused-parameter"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"fragment" : "-O0"
 				},
 				{
-					"backtrace" : 5,
-					"fragment" : "-g3"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "-fsanitize=address,undefined"
+					"backtrace" : 4,
+					"fragment" : "-g"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 7,
+					"backtrace" : 5,
 					"path" : "/Users/abhigyansinha/CVM++/src"
 				}
 			],
@@ -172,11 +155,6 @@
 			},
 			{
 				"fragment" : "-Wl,-search_paths_first -Wl,-headerpad_max_install_names",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "-fsanitize=address,undefined",
 				"role" : "flags"
 			}
 		],

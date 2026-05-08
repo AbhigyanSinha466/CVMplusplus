@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/abhigyansinha/CVM++/src
 
-CXX_FLAGSarm64 = -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined
+CXX_FLAGSarm64 = -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g
 
-CXX_FLAGS = -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g3 -fsanitize=address,undefined
+CXX_FLAGS = -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wno-unused-parameter -O0 -g
 
