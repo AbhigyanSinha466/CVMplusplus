@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/abhigyansinha/Downloads/cvm++
+CMAKE_SOURCE_DIR = /Users/abhigyansinha/CVM++
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/abhigyansinha/Downloads/cvm++/build
+CMAKE_BINARY_DIR = /Users/abhigyansinha/CVM++/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cvm.dir/depend.make
@@ -73,102 +73,102 @@ CMakeFiles/cvm.dir/codegen:
 .PHONY : CMakeFiles/cvm.dir/codegen
 
 CMakeFiles/cvm.dir/src/main.cpp.o: CMakeFiles/cvm.dir/flags.make
-CMakeFiles/cvm.dir/src/main.cpp.o: /Users/abhigyansinha/Downloads/cvm++/src/main.cpp
+CMakeFiles/cvm.dir/src/main.cpp.o: /Users/abhigyansinha/CVM++/src/main.cpp
 CMakeFiles/cvm.dir/src/main.cpp.o: CMakeFiles/cvm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cvm.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/main.cpp.o -MF CMakeFiles/cvm.dir/src/main.cpp.o.d -o CMakeFiles/cvm.dir/src/main.cpp.o -c /Users/abhigyansinha/Downloads/cvm++/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/CVM++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cvm.dir/src/main.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/main.cpp.o -MF CMakeFiles/cvm.dir/src/main.cpp.o.d -o CMakeFiles/cvm.dir/src/main.cpp.o -c /Users/abhigyansinha/CVM++/src/main.cpp
 
 CMakeFiles/cvm.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cvm.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/Downloads/cvm++/src/main.cpp > CMakeFiles/cvm.dir/src/main.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/CVM++/src/main.cpp > CMakeFiles/cvm.dir/src/main.cpp.i
 
 CMakeFiles/cvm.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cvm.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/Downloads/cvm++/src/main.cpp -o CMakeFiles/cvm.dir/src/main.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/CVM++/src/main.cpp -o CMakeFiles/cvm.dir/src/main.cpp.s
 
 CMakeFiles/cvm.dir/src/lexer.cpp.o: CMakeFiles/cvm.dir/flags.make
-CMakeFiles/cvm.dir/src/lexer.cpp.o: /Users/abhigyansinha/Downloads/cvm++/src/lexer.cpp
+CMakeFiles/cvm.dir/src/lexer.cpp.o: /Users/abhigyansinha/CVM++/src/lexer.cpp
 CMakeFiles/cvm.dir/src/lexer.cpp.o: CMakeFiles/cvm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cvm.dir/src/lexer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/lexer.cpp.o -MF CMakeFiles/cvm.dir/src/lexer.cpp.o.d -o CMakeFiles/cvm.dir/src/lexer.cpp.o -c /Users/abhigyansinha/Downloads/cvm++/src/lexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/CVM++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cvm.dir/src/lexer.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/lexer.cpp.o -MF CMakeFiles/cvm.dir/src/lexer.cpp.o.d -o CMakeFiles/cvm.dir/src/lexer.cpp.o -c /Users/abhigyansinha/CVM++/src/lexer.cpp
 
 CMakeFiles/cvm.dir/src/lexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cvm.dir/src/lexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/Downloads/cvm++/src/lexer.cpp > CMakeFiles/cvm.dir/src/lexer.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/CVM++/src/lexer.cpp > CMakeFiles/cvm.dir/src/lexer.cpp.i
 
 CMakeFiles/cvm.dir/src/lexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cvm.dir/src/lexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/Downloads/cvm++/src/lexer.cpp -o CMakeFiles/cvm.dir/src/lexer.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/CVM++/src/lexer.cpp -o CMakeFiles/cvm.dir/src/lexer.cpp.s
 
 CMakeFiles/cvm.dir/src/ast.cpp.o: CMakeFiles/cvm.dir/flags.make
-CMakeFiles/cvm.dir/src/ast.cpp.o: /Users/abhigyansinha/Downloads/cvm++/src/ast.cpp
+CMakeFiles/cvm.dir/src/ast.cpp.o: /Users/abhigyansinha/CVM++/src/ast.cpp
 CMakeFiles/cvm.dir/src/ast.cpp.o: CMakeFiles/cvm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cvm.dir/src/ast.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/ast.cpp.o -MF CMakeFiles/cvm.dir/src/ast.cpp.o.d -o CMakeFiles/cvm.dir/src/ast.cpp.o -c /Users/abhigyansinha/Downloads/cvm++/src/ast.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/CVM++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cvm.dir/src/ast.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/ast.cpp.o -MF CMakeFiles/cvm.dir/src/ast.cpp.o.d -o CMakeFiles/cvm.dir/src/ast.cpp.o -c /Users/abhigyansinha/CVM++/src/ast.cpp
 
 CMakeFiles/cvm.dir/src/ast.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cvm.dir/src/ast.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/Downloads/cvm++/src/ast.cpp > CMakeFiles/cvm.dir/src/ast.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/CVM++/src/ast.cpp > CMakeFiles/cvm.dir/src/ast.cpp.i
 
 CMakeFiles/cvm.dir/src/ast.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cvm.dir/src/ast.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/Downloads/cvm++/src/ast.cpp -o CMakeFiles/cvm.dir/src/ast.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/CVM++/src/ast.cpp -o CMakeFiles/cvm.dir/src/ast.cpp.s
 
 CMakeFiles/cvm.dir/src/parser.cpp.o: CMakeFiles/cvm.dir/flags.make
-CMakeFiles/cvm.dir/src/parser.cpp.o: /Users/abhigyansinha/Downloads/cvm++/src/parser.cpp
+CMakeFiles/cvm.dir/src/parser.cpp.o: /Users/abhigyansinha/CVM++/src/parser.cpp
 CMakeFiles/cvm.dir/src/parser.cpp.o: CMakeFiles/cvm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cvm.dir/src/parser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/parser.cpp.o -MF CMakeFiles/cvm.dir/src/parser.cpp.o.d -o CMakeFiles/cvm.dir/src/parser.cpp.o -c /Users/abhigyansinha/Downloads/cvm++/src/parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/CVM++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cvm.dir/src/parser.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/parser.cpp.o -MF CMakeFiles/cvm.dir/src/parser.cpp.o.d -o CMakeFiles/cvm.dir/src/parser.cpp.o -c /Users/abhigyansinha/CVM++/src/parser.cpp
 
 CMakeFiles/cvm.dir/src/parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cvm.dir/src/parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/Downloads/cvm++/src/parser.cpp > CMakeFiles/cvm.dir/src/parser.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/CVM++/src/parser.cpp > CMakeFiles/cvm.dir/src/parser.cpp.i
 
 CMakeFiles/cvm.dir/src/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cvm.dir/src/parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/Downloads/cvm++/src/parser.cpp -o CMakeFiles/cvm.dir/src/parser.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/CVM++/src/parser.cpp -o CMakeFiles/cvm.dir/src/parser.cpp.s
 
 CMakeFiles/cvm.dir/src/bytecode.cpp.o: CMakeFiles/cvm.dir/flags.make
-CMakeFiles/cvm.dir/src/bytecode.cpp.o: /Users/abhigyansinha/Downloads/cvm++/src/bytecode.cpp
+CMakeFiles/cvm.dir/src/bytecode.cpp.o: /Users/abhigyansinha/CVM++/src/bytecode.cpp
 CMakeFiles/cvm.dir/src/bytecode.cpp.o: CMakeFiles/cvm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cvm.dir/src/bytecode.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/bytecode.cpp.o -MF CMakeFiles/cvm.dir/src/bytecode.cpp.o.d -o CMakeFiles/cvm.dir/src/bytecode.cpp.o -c /Users/abhigyansinha/Downloads/cvm++/src/bytecode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/CVM++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cvm.dir/src/bytecode.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/bytecode.cpp.o -MF CMakeFiles/cvm.dir/src/bytecode.cpp.o.d -o CMakeFiles/cvm.dir/src/bytecode.cpp.o -c /Users/abhigyansinha/CVM++/src/bytecode.cpp
 
 CMakeFiles/cvm.dir/src/bytecode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cvm.dir/src/bytecode.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/Downloads/cvm++/src/bytecode.cpp > CMakeFiles/cvm.dir/src/bytecode.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/CVM++/src/bytecode.cpp > CMakeFiles/cvm.dir/src/bytecode.cpp.i
 
 CMakeFiles/cvm.dir/src/bytecode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cvm.dir/src/bytecode.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/Downloads/cvm++/src/bytecode.cpp -o CMakeFiles/cvm.dir/src/bytecode.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/CVM++/src/bytecode.cpp -o CMakeFiles/cvm.dir/src/bytecode.cpp.s
 
 CMakeFiles/cvm.dir/src/compiler.cpp.o: CMakeFiles/cvm.dir/flags.make
-CMakeFiles/cvm.dir/src/compiler.cpp.o: /Users/abhigyansinha/Downloads/cvm++/src/compiler.cpp
+CMakeFiles/cvm.dir/src/compiler.cpp.o: /Users/abhigyansinha/CVM++/src/compiler.cpp
 CMakeFiles/cvm.dir/src/compiler.cpp.o: CMakeFiles/cvm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cvm.dir/src/compiler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/compiler.cpp.o -MF CMakeFiles/cvm.dir/src/compiler.cpp.o.d -o CMakeFiles/cvm.dir/src/compiler.cpp.o -c /Users/abhigyansinha/Downloads/cvm++/src/compiler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/CVM++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cvm.dir/src/compiler.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/compiler.cpp.o -MF CMakeFiles/cvm.dir/src/compiler.cpp.o.d -o CMakeFiles/cvm.dir/src/compiler.cpp.o -c /Users/abhigyansinha/CVM++/src/compiler.cpp
 
 CMakeFiles/cvm.dir/src/compiler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cvm.dir/src/compiler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/Downloads/cvm++/src/compiler.cpp > CMakeFiles/cvm.dir/src/compiler.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/CVM++/src/compiler.cpp > CMakeFiles/cvm.dir/src/compiler.cpp.i
 
 CMakeFiles/cvm.dir/src/compiler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cvm.dir/src/compiler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/Downloads/cvm++/src/compiler.cpp -o CMakeFiles/cvm.dir/src/compiler.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/CVM++/src/compiler.cpp -o CMakeFiles/cvm.dir/src/compiler.cpp.s
 
 CMakeFiles/cvm.dir/src/vm.cpp.o: CMakeFiles/cvm.dir/flags.make
-CMakeFiles/cvm.dir/src/vm.cpp.o: /Users/abhigyansinha/Downloads/cvm++/src/vm.cpp
+CMakeFiles/cvm.dir/src/vm.cpp.o: /Users/abhigyansinha/CVM++/src/vm.cpp
 CMakeFiles/cvm.dir/src/vm.cpp.o: CMakeFiles/cvm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cvm.dir/src/vm.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/vm.cpp.o -MF CMakeFiles/cvm.dir/src/vm.cpp.o.d -o CMakeFiles/cvm.dir/src/vm.cpp.o -c /Users/abhigyansinha/Downloads/cvm++/src/vm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/abhigyansinha/CVM++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cvm.dir/src/vm.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cvm.dir/src/vm.cpp.o -MF CMakeFiles/cvm.dir/src/vm.cpp.o.d -o CMakeFiles/cvm.dir/src/vm.cpp.o -c /Users/abhigyansinha/CVM++/src/vm.cpp
 
 CMakeFiles/cvm.dir/src/vm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cvm.dir/src/vm.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/Downloads/cvm++/src/vm.cpp > CMakeFiles/cvm.dir/src/vm.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhigyansinha/CVM++/src/vm.cpp > CMakeFiles/cvm.dir/src/vm.cpp.i
 
 CMakeFiles/cvm.dir/src/vm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cvm.dir/src/vm.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/Downloads/cvm++/src/vm.cpp -o CMakeFiles/cvm.dir/src/vm.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhigyansinha/CVM++/src/vm.cpp -o CMakeFiles/cvm.dir/src/vm.cpp.s
 
 # Object files for target cvm
 cvm_OBJECTS = \
@@ -192,7 +192,7 @@ cvm: CMakeFiles/cvm.dir/src/compiler.cpp.o
 cvm: CMakeFiles/cvm.dir/src/vm.cpp.o
 cvm: CMakeFiles/cvm.dir/build.make
 cvm: CMakeFiles/cvm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable cvm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/abhigyansinha/CVM++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable cvm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cvm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -204,6 +204,6 @@ CMakeFiles/cvm.dir/clean:
 .PHONY : CMakeFiles/cvm.dir/clean
 
 CMakeFiles/cvm.dir/depend:
-	cd /Users/abhigyansinha/Downloads/cvm++/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/abhigyansinha/Downloads/cvm++ /Users/abhigyansinha/Downloads/cvm++ /Users/abhigyansinha/Downloads/cvm++/build /Users/abhigyansinha/Downloads/cvm++/build /Users/abhigyansinha/Downloads/cvm++/build/CMakeFiles/cvm.dir/DependInfo.cmake "--color=$(COLOR)" cvm
+	cd /Users/abhigyansinha/CVM++/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/abhigyansinha/CVM++ /Users/abhigyansinha/CVM++ /Users/abhigyansinha/CVM++/build /Users/abhigyansinha/CVM++/build /Users/abhigyansinha/CVM++/build/CMakeFiles/cvm.dir/DependInfo.cmake "--color=$(COLOR)" cvm
 .PHONY : CMakeFiles/cvm.dir/depend
 

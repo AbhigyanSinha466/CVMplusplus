@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/abhigyansinha/Downloads/cvm++/build/cmake_install.cmake"
+		"/Users/abhigyansinha/CVM++/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
