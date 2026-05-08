@@ -1,0 +1,7 @@
+test_hello 1 0.700703
+test_arithmetic 1 0.00558483
+test_factorial 1 0.00432325
+test_fibonacci 1 0.00295167
+test_fizzbuzz 1 0.00286633
+test_booleans 1 0.00203717
+---

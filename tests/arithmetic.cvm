@@ -1,0 +1,33 @@
+// arithmetic.cvm — Exercises all four arithmetic operators.
+// Demonstrates: let, assignment, +, -, *, /, operator precedence.
+
+let a = 10;
+let b = 3;
+
+// Addition
+let sum = a + b;
+print sum;          // 13
+
+// Subtraction
+let diff = a - b;
+print diff;         // 7
+
+// Multiplication — higher precedence than +/- (handled by parser)
+let prod = a * b;
+print prod;         // 30
+
+// Division (integer division)
+let quot = a / b;
+print quot;         // 3
+
+// Compound expression: (a + b) * (a - b) = 13 * 7 = 91
+let compound = (a + b) * (a - b);
+print compound;     // 91
+
+// Nested precedence: 2 + 3 * 4 = 14  (not 20)
+let prec = 2 + 3 * 4;
+print prec;         // 14
+
+// Reassignment
+a = a + 1;
+print a;            // 11

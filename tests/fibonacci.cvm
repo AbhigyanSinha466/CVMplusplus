@@ -1,0 +1,21 @@
+// fibonacci.cvm — Print the first 10 Fibonacci numbers.
+// Demonstrates: let, while, assignment, +, <, print.
+//
+// Expected output:
+//   0 1 1 2 3 5 8 13 21 34  (each on its own line)
+
+let a = 0;
+let b = 1;
+let count = 0;
+let limit = 10;
+
+while (count < limit) {
+    print a;
+
+    // Compute next: temp = b, b = a + b, a = temp
+    let temp = b;
+    b = a + b;
+    a = temp;
+
+    count = count + 1;
+}

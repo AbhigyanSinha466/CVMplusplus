@@ -1,0 +1,8 @@
+// hello.cvm — The classic first program.
+// Demonstrates: let, print, integer literals, string-like boolean output.
+
+let greeting = 42;   // CVM++ has no strings; we use integers as stand-ins
+print greeting;      // Output: 42
+
+let flag = true;
+print flag;          // Output: true

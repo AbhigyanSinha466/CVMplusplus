@@ -1,0 +1,54 @@
+// booleans.cvm — Exercises boolean literals, comparisons, and if/else.
+// Demonstrates: true, false, ==, <, if/else nesting.
+
+let t = true;
+let f = false;
+
+// Basic identity checks
+print t;               // true
+print f;               // false
+print t == true;       // true
+print f == false;      // true
+print t == f;          // false
+
+// Numeric comparisons produce booleans
+let x = 42;
+let y = 100;
+
+print x < y;           // true
+print y < x;           // false
+print x == 42;         // true
+print x == 43;         // false
+
+// if/else branches based on comparison
+if (x < y) {
+    print 1;           // 1 (branch taken)
+} else {
+    print 0;
+}
+
+// Nested if/else
+let a = 10;
+let b = 20;
+let c = 30;
+
+if (a < b) {
+    if (b < c) {
+        print 100;     // 100 — both conditions true
+    } else {
+        print 200;
+    }
+} else {
+    print 300;
+}
+
+// while that never runs (condition is false immediately)
+let done = false;
+let counter = 0;
+while (done == false) {
+    counter = counter + 1;
+    if (counter == 5) {
+        done = true;
+    }
+}
+print counter;         // 5

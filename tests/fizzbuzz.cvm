@@ -1,0 +1,45 @@
+// fizzbuzz.cvm — Classic FizzBuzz, 1 to 20.
+// Since CVM++ has no strings and no modulo operator, we simulate FizzBuzz
+// using integer division and reconstruction, demonstrating rich control flow.
+//
+// Strategy:
+//   fizzCount counts up to 3 (fizz period)
+//   buzzCount counts up to 5 (buzz period)
+//   We reset each counter when it hits its period.
+//
+// Output legend (no strings in CVM++):
+//   0  = FizzBuzz
+//   1  = Fizz only
+//   2  = Buzz only
+//   n  = the number itself
+
+let i       = 1;
+let limit   = 20;
+let fizz    = 0;   // resets every 3
+let buzz    = 0;   // resets every 5
+
+while (i < limit + 1) {
+    fizz = fizz + 1;
+    buzz = buzz + 1;
+
+    // Reset counters when they hit their period
+    if (fizz == 3 + 1) { fizz = 1; }
+    if (buzz == 5 + 1) { buzz = 1; }
+
+    // Print 0 for FizzBuzz, 1 for Fizz, 2 for Buzz, else the number
+    if (fizz == 3) {
+        if (buzz == 5) {
+            print 0;   // FizzBuzz
+        } else {
+            print 1;   // Fizz
+        }
+    } else {
+        if (buzz == 5) {
+            print 2;   // Buzz
+        } else {
+            print i;   // the number
+        }
+    }
+
+    i = i + 1;
+}

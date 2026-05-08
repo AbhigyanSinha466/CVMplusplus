@@ -1,0 +1,20 @@
+// factorial.cvm — Compute n! using a while loop.
+// Demonstrates: let, while, if, assignment, *, <, ==, print.
+//
+// Expected output for n = 7: 5040
+
+let n = 7;
+let result = 1;
+let i = 1;
+
+// Iterative factorial: result = 1 * 2 * 3 * ... * n
+while (i < n + 1) {
+    result = result * i;
+    i = i + 1;
+}
+
+print result;   // 5040
+
+// Bonus: check if result equals the known answer
+let correct = result == 5040;
+print correct;  // true

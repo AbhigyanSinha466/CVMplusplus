@@ -1,0 +1,22 @@
+// input_demo.cvm — Demonstrates the 'input' keyword for interactive programs.
+// Run: cvm tests/input_demo.cvm
+//
+// The program reads two integers from the user and prints:
+//   - their sum
+//   - their product
+//   - whether the first is less than the second
+
+// Read first number
+let a = input;
+
+// Read second number
+let b = input;
+
+// Compute and display results
+let s = a + b;
+let p = a * b;
+let less = a < b;
+
+print s;      // sum
+print p;      // product
+print less;   // true if a < b, false otherwise
