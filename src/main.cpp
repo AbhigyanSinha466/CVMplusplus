@@ -142,8 +142,7 @@ static void runREPL(bool debug) {
 // =============================================================================
 static void printHelp(const char* progName) {
     std::cout <<
-        "CVM++ — A Lightweight Scripting Language with Stack-Based VM\n"
-        "Coding Club, IIT Guwahati — Even Semester Projects 2026\n\n"
+        "CVM++ — A Lightweight Scripting Language with Stack-Based VM\n\n"
         "Usage:\n"
         "  " << progName << "                    # Interactive REPL\n"
         "  " << progName << " <script.cvm>       # Run a script file\n"
@@ -151,7 +150,7 @@ static void printHelp(const char* progName) {
         "  " << progName << " --help             # Show this help\n\n"
         "Language features:\n"
         "  Data types : Integer, Boolean\n"
-        "  Operators  : + - * / == <\n"
+        "  Operators  : + - * / % == != < <= > >=\n"
         "  Variables  : let x = 10;\n"
         "  Assignment : x = x + 1;\n"
         "  Control    : if (cond) { ... } else { ... }\n"

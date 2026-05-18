@@ -90,7 +90,7 @@ struct IdentifierNode : ASTNode {
 };
 
 // Binary expression: left OP right
-// op is stored as the lexeme string ("+", "-", "*", "/", "==", "<")
+// op is stored as the lexeme string ("+", "-", "*", "/", "%", "==", "!=", "<", "<=", ">", ">=")
 struct BinaryExprNode : ASTNode {
     std::string op;
     NodePtr     left;

@@ -18,9 +18,9 @@
 //   whileStmt   := 'while' '(' expr ')' block
 //   block       := '{' stmt* '}'
 //   expr        := comparison
-//   comparison  := addition ( ('==' | '<') addition )*
+//   comparison  := addition ( ('==' | '!=' | '<' | '<=' | '>' | '>=') addition )*
 //   addition    := term ( ('+' | '-') term )*
-//   term        := factor ( ('*' | '/') factor )*
+//   term        := factor ( ('*' | '/' | '%') factor )*
 //   factor      := NUMBER | 'true' | 'false' | IDENT | '(' expr ')'
 // =============================================================================
 
