@@ -2,7 +2,7 @@
 // bytecode.cpp — Opcode name table
 // =============================================================================
 
-#include "bytecode.hpp"
+#include "../include/bytecode.hpp"
 
 const char* opcodeName(Opcode op) {
     switch (op) {
@@ -15,8 +15,13 @@ const char* opcodeName(Opcode op) {
         case Opcode::SUB:           return "SUB";
         case Opcode::MUL:           return "MUL";
         case Opcode::DIV:           return "DIV";
+        case Opcode::MOD:           return "MOD";
         case Opcode::CMP_EQ:        return "CMP_EQ";
+        case Opcode::CMP_NE:        return "CMP_NE";
         case Opcode::CMP_LT:        return "CMP_LT";
+        case Opcode::CMP_LE:        return "CMP_LE";
+        case Opcode::CMP_GT:        return "CMP_GT";
+        case Opcode::CMP_GE:        return "CMP_GE";
         case Opcode::JUMP:          return "JUMP";
         case Opcode::JUMP_IF_FALSE: return "JUMP_IF_FALSE";
         case Opcode::PRINT:         return "PRINT";

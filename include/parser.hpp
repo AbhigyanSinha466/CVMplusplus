@@ -24,8 +24,8 @@
 //   factor      := NUMBER | 'true' | 'false' | IDENT | '(' expr ')'
 // =============================================================================
 
-#include "lexer.hpp"
-#include "ast.hpp"
+#include "../include/lexer.hpp"
+#include "../include/ast.hpp"
 #include <vector>
 #include <stdexcept>
 

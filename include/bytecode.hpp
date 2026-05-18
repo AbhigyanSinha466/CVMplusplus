@@ -43,10 +43,15 @@ enum class Opcode : uint8_t {
     SUB             = 0x21,
     MUL             = 0x22,
     DIV             = 0x23,
+    MOD             = 0x24,
 
     // --- Comparison (pop 2, push bool) ---
     CMP_EQ          = 0x30, // ==
-    CMP_LT          = 0x31, // <
+    CMP_NE          = 0x31, // !=
+    CMP_LT          = 0x32, // <
+    CMP_LE          = 0x33, // <=
+    CMP_GT          = 0x34, // >
+    CMP_GE          = 0x35, // >=
 
     // --- Control Flow ---
     JUMP            = 0x40, // unconditional jump  [4 bytes: int32_t target offset]

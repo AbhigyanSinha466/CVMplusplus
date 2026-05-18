@@ -2,7 +2,7 @@
 // parser.cpp — CVM++ Recursive Descent Parser Implementation
 // =============================================================================
 
-#include "parser.hpp"
+#include "../include/parser.hpp"
 #include <stdexcept>
 
 // =============================================================================
@@ -185,10 +185,12 @@ NodePtr Parser::parseExpr() {
     return parseComparison();
 }
 
-// comparison := addition ( ('==' | '<') addition )*
+// comparison := addition ( ('==' | '!=' | '<' | '<=' | '>' | '>=') addition )*
 NodePtr Parser::parseComparison() {
     NodePtr left = parseAddition();
-    while (check(TokenType::EQUAL_EQUAL) || check(TokenType::LESS)) {
+    while (check(TokenType::EQUAL_EQUAL) || check(TokenType::BANG_EQUAL) ||
+           check(TokenType::LESS)        || check(TokenType::LESS_EQUAL) ||
+           check(TokenType::GREATER)     || check(TokenType::GREATER_EQUAL)) {
         const Token& op = advance();
         NodePtr right = parseAddition();
         left = std::make_unique<BinaryExprNode>(op.lexeme, std::move(left), std::move(right), op.line);
@@ -207,10 +209,10 @@ NodePtr Parser::parseAddition() {
     return left;
 }
 
-// term := factor ( ('*' | '/') factor )*
+// term := factor ( ('*' | '/' | '%') factor )*
 NodePtr Parser::parseTerm() {
     NodePtr left = parseFactor();
-    while (check(TokenType::STAR) || check(TokenType::SLASH)) {
+    while (check(TokenType::STAR) || check(TokenType::SLASH) || check(TokenType::PERCENT)) {
         const Token& op = advance();
         NodePtr right = parseFactor();
         left = std::make_unique<BinaryExprNode>(op.lexeme, std::move(left), std::move(right), op.line);

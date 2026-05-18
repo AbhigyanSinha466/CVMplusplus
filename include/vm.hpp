@@ -17,7 +17,7 @@
 //   to represent both without heap allocation.
 // =============================================================================
 
-#include "compiler.hpp"  // Chunk
+#include "../include/compiler.hpp"  // Chunk
 #include <vector>
 #include <variant>
 #include <string>

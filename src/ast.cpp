@@ -2,7 +2,7 @@
 // ast.cpp — AST Printer (Debug Mode)
 // =============================================================================
 
-#include "ast.hpp"
+#include "../include/ast.hpp"
 #include <iostream>
 
 // Recursively pretty-print a node with indentation.

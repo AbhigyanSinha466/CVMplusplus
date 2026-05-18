@@ -2,7 +2,7 @@
 // lexer.cpp — CVM++ Lexer Implementation
 // =============================================================================
 
-#include "lexer.hpp"
+#include "../include/lexer.hpp"
 #include <cctype>
 #include <stdexcept>
 #include <unordered_map>
@@ -27,8 +27,13 @@ const char* tokenTypeName(TokenType t) {
         case TokenType::MINUS:        return "MINUS";
         case TokenType::STAR:         return "STAR";
         case TokenType::SLASH:        return "SLASH";
+        case TokenType::PERCENT:      return "PERCENT";
         case TokenType::EQUAL_EQUAL:  return "EQUAL_EQUAL";
+        case TokenType::BANG_EQUAL:   return "BANG_EQUAL";
         case TokenType::LESS:         return "LESS";
+        case TokenType::LESS_EQUAL:   return "LESS_EQUAL";
+        case TokenType::GREATER:      return "GREATER";
+        case TokenType::GREATER_EQUAL: return "GREATER_EQUAL";
         case TokenType::ASSIGN:       return "ASSIGN";
         case TokenType::LPAREN:       return "LPAREN";
         case TokenType::RPAREN:       return "RPAREN";
@@ -91,6 +96,7 @@ std::vector<Token> Lexer::tokenize() {
             case '-': tokens.emplace_back(TokenType::MINUS,     "-", m_line); break;
             case '*': tokens.emplace_back(TokenType::STAR,      "*", m_line); break;
             case '/': tokens.emplace_back(TokenType::SLASH,     "/", m_line); break;
+            case '%': tokens.emplace_back(TokenType::PERCENT,   "%", m_line); break;
             case '(': tokens.emplace_back(TokenType::LPAREN,    "(", m_line); break;
             case ')': tokens.emplace_back(TokenType::RPAREN,    ")", m_line); break;
             case '{': tokens.emplace_back(TokenType::LBRACE,    "{", m_line); break;
@@ -107,8 +113,33 @@ std::vector<Token> Lexer::tokenize() {
                 }
                 break;
 
+            case '!':
+                if (!isAtEnd() && peek() == '=') {
+                    advance();
+                    tokens.emplace_back(TokenType::BANG_EQUAL, "!=", m_line);
+                } else {
+                    throw std::runtime_error(
+                        "Lexer error at line " + std::to_string(m_line) +
+                        ": unexpected character '!' (did you mean '!=')");
+                }
+                break;
+
             case '<':
-                tokens.emplace_back(TokenType::LESS, "<", m_line);
+                if (!isAtEnd() && peek() == '=') {
+                    advance();
+                    tokens.emplace_back(TokenType::LESS_EQUAL, "<=", m_line);
+                } else {
+                    tokens.emplace_back(TokenType::LESS, "<", m_line);
+                }
+                break;
+
+            case '>':
+                if (!isAtEnd() && peek() == '=') {
+                    advance();
+                    tokens.emplace_back(TokenType::GREATER_EQUAL, ">=", m_line);
+                } else {
+                    tokens.emplace_back(TokenType::GREATER, ">", m_line);
+                }
                 break;
 
             default:

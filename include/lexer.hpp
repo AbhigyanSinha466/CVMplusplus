@@ -41,10 +41,15 @@ enum class TokenType {
     MINUS,          // -
     STAR,           // *
     SLASH,          // /
+    PERCENT,        // %
 
     // --- Comparison Operators ---
     EQUAL_EQUAL,    // ==
+    BANG_EQUAL,     // !=
     LESS,           // <
+    LESS_EQUAL,     // <=
+    GREATER,        // >
+    GREATER_EQUAL,  // >=
 
     // --- Assignment ---
     ASSIGN,         // =

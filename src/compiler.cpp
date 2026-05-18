@@ -2,7 +2,7 @@
 // compiler.cpp — CVM++ Compiler Implementation
 // =============================================================================
 
-#include "compiler.hpp"
+#include "../include/compiler.hpp"
 #include <stdexcept>
 #include <iomanip>
 #include <sstream>
@@ -228,8 +228,13 @@ void Compiler::emitExpr(const ASTNode* node) {
             else if (n->op == "-")  emitOpcode(Opcode::SUB);
             else if (n->op == "*")  emitOpcode(Opcode::MUL);
             else if (n->op == "/")  emitOpcode(Opcode::DIV);
+            else if (n->op == "%")  emitOpcode(Opcode::MOD);
             else if (n->op == "==") emitOpcode(Opcode::CMP_EQ);
+            else if (n->op == "!=") emitOpcode(Opcode::CMP_NE);
             else if (n->op == "<")  emitOpcode(Opcode::CMP_LT);
+            else if (n->op == "<=") emitOpcode(Opcode::CMP_LE);
+            else if (n->op == ">")  emitOpcode(Opcode::CMP_GT);
+            else if (n->op == ">=") emitOpcode(Opcode::CMP_GE);
             else throw std::runtime_error("Compiler: unknown operator '" + n->op + "'");
             break;
         }

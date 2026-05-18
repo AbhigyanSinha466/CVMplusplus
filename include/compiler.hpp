@@ -20,8 +20,8 @@
 //      written in little-endian order directly into the uint8_t stream.
 // =============================================================================
 
-#include "ast.hpp"
-#include "bytecode.hpp"
+#include "../include/ast.hpp"
+#include "../include/bytecode.hpp"
 #include <vector>
 #include <string>
 #include <unordered_map>

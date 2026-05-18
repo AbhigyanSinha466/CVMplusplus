@@ -28,11 +28,11 @@
 //   before executing the script.
 // =============================================================================
 
-#include "lexer.hpp"
-#include "parser.hpp"
-#include "compiler.hpp"
-#include "vm.hpp"
-#include "ast.hpp"
+#include "../include/lexer.hpp"
+#include "../include/parser.hpp"
+#include "../include/compiler.hpp"
+#include "../include/vm.hpp"
+#include "../include/ast.hpp"
 
 #include <iostream>
 #include <fstream>

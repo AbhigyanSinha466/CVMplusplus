@@ -5,7 +5,7 @@
 // decodes its payload (if any), and applies the operation to the stack.
 // =============================================================================
 
-#include "vm.hpp"
+#include "../include/vm.hpp"
 #include <iostream>
 #include <cstring>
 #include <stdexcept>
@@ -140,24 +140,51 @@ void VM::execute(const Chunk& chunk) {
                 push(asInt(l, "DIV") / divisor);
                 break;
             }
-
-            // -----------------------------------------------------------------
-            // CMP_EQ — equality comparison (works for both int and bool)
-            // Pushes a bool result.
-            // -----------------------------------------------------------------
-            case Opcode::CMP_EQ: {
+            case Opcode::MOD: {
                 Value r = pop(); Value l = pop();
-                push(l == r); // std::variant operator== compares type + value
+                int64_t divisor = asInt(r, "MOD");
+                if (divisor == 0)
+                    throw RuntimeError("RuntimeError: modulo by zero");
+                push(asInt(l, "MOD") % divisor);
                 break;
             }
 
             // -----------------------------------------------------------------
-            // CMP_LT — less-than comparison (integers only)
-            // Pushes a bool result.
+            // Comparison: pop right, pop left, push bool result.
+            // CMP_EQ and CMP_NE work for both int and bool.
+            // -----------------------------------------------------------------
+            case Opcode::CMP_EQ: {
+                Value r = pop(); Value l = pop();
+                push(l == r);
+                break;
+            }
+            case Opcode::CMP_NE: {
+                Value r = pop(); Value l = pop();
+                push(l != r);
+                break;
+            }
+
+            // -----------------------------------------------------------------
+            // Inequality Comparison: integers only.
             // -----------------------------------------------------------------
             case Opcode::CMP_LT: {
                 Value r = pop(); Value l = pop();
                 push(asInt(l, "CMP_LT") < asInt(r, "CMP_LT"));
+                break;
+            }
+            case Opcode::CMP_LE: {
+                Value r = pop(); Value l = pop();
+                push(asInt(l, "CMP_LE") <= asInt(r, "CMP_LE"));
+                break;
+            }
+            case Opcode::CMP_GT: {
+                Value r = pop(); Value l = pop();
+                push(asInt(l, "CMP_GT") > asInt(r, "CMP_GT"));
+                break;
+            }
+            case Opcode::CMP_GE: {
+                Value r = pop(); Value l = pop();
+                push(asInt(l, "CMP_GE") >= asInt(r, "CMP_GE"));
                 break;
             }
 
