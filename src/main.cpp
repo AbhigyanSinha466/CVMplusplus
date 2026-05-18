@@ -43,7 +43,8 @@
 // =============================================================================
 // run() — Execute a complete source string through the full pipeline.
 // =============================================================================
-static void run(const std::string& source, bool debug) {
+static void run(const std::string& source, bool debug, 
+                Compiler& compiler, VM& vm, Chunk& chunk) {
     // ---- Stage 1: Lexing ----
     Lexer lexer(source);
     std::vector<Token> tokens = lexer.tokenize();
@@ -69,15 +70,13 @@ static void run(const std::string& source, bool debug) {
     }
 
     // ---- Stage 3: Compiling ----
-    Compiler compiler;
-    Chunk chunk = compiler.compile(ast.get());
+    compiler.compile(ast.get(), chunk);
 
     if (debug) {
         Compiler::disassemble(chunk);
     }
 
     // ---- Stage 4: Executing ----
-    VM vm;
     vm.execute(chunk);
 }
 
@@ -94,8 +93,12 @@ static void runFile(const std::string& path, bool debug) {
     buf << file.rdbuf();
     std::string source = buf.str();
 
+    Compiler compiler;
+    VM vm;
+    Chunk chunk;
+
     try {
-        run(source, debug);
+        run(source, debug, compiler, vm, chunk);
     } catch (const std::exception& e) {
         std::cerr << e.what() << "\n";
         std::exit(1);
@@ -104,12 +107,16 @@ static void runFile(const std::string& path, bool debug) {
 
 // =============================================================================
 // runREPL() — Interactive Read-Eval-Print Loop.
-// Each line is executed independently (no persistent state between lines).
+// Variables and VM state persist between lines.
 // =============================================================================
 static void runREPL(bool debug) {
     std::cout << "CVM++ Interactive REPL\n";
     std::cout << "Type CVM++ statements ending with ';'. Enter 'exit' to quit.\n";
     std::cout << "Use '-d' flag at launch for debug mode.\n\n";
+
+    Compiler compiler;
+    VM vm;
+    Chunk chunk;
 
     std::string line;
     while (true) {
@@ -122,7 +129,7 @@ static void runREPL(bool debug) {
         if (line.empty()) continue;
 
         try {
-            run(line, debug);
+            run(line, debug, compiler, vm, chunk);
         } catch (const std::exception& e) {
             std::cerr << e.what() << "\n";
             // Don't exit on error in REPL — just print and continue

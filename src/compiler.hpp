@@ -65,8 +65,8 @@ struct Chunk {
 // -----------------------------------------------------------------------------
 class Compiler {
 public:
-    // Compile the full program AST. Returns the populated Chunk.
-    Chunk compile(const ASTNode* root);
+    // Compile the full program AST into the provided Chunk.
+    void compile(const ASTNode* root, Chunk& chunk);
 
     // Disassemble the chunk to human-readable instructions (debug mode).
     static void disassemble(const Chunk& chunk);

@@ -42,11 +42,15 @@ bool isTruthy(const Value& v) {
 // =============================================================================
 
 void VM::execute(const Chunk& chunk) {
-    // Reset state for a fresh run
+    // Reset transient state for a fresh run
     m_stack.clear();
-    m_vars.clear();
-    m_vars.resize(chunk.varNames.size()); // pre-allocate all variable slots
     m_ip = 0;
+
+    // Ensure variable storage is large enough for all variables in the chunk.
+    // Existing variable values are preserved.
+    if (m_vars.size() < chunk.varNames.size()) {
+        m_vars.resize(chunk.varNames.size());
+    }
 
     const auto& code = chunk.code;
 

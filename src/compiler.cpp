@@ -13,14 +13,12 @@
 // Public Interface
 // =============================================================================
 
-Chunk Compiler::compile(const ASTNode* root) {
-    m_chunk = new Chunk();
+void Compiler::compile(const ASTNode* root, Chunk& chunk) {
+    m_chunk = &chunk;
+    m_chunk->code.clear(); // Fresh code for this snippet
     emitNode(root);
     emitOpcode(Opcode::HALT);
-    Chunk result = std::move(*m_chunk);
-    delete m_chunk;
     m_chunk = nullptr;
-    return result;
 }
 
 // =============================================================================
