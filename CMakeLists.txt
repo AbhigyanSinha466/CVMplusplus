@@ -65,7 +65,7 @@ set(CVM_SOURCES
 # ─────────────────────────────────────────────────────────────────────────────
 add_executable(cvm ${CVM_SOURCES})
 
-target_include_directories(cvm PRIVATE src)
+target_include_directories(cvm PRIVATE include src)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CTest integration — run sample scripts as smoke tests
