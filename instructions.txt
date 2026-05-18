@@ -1,0 +1,112 @@
+CVM++ — Build & Run Instructions
+=================================
+
+CVM++ is a stack-based virtual machine and bytecode compiler for a custom
+scripting language, written in C++17 with zero external dependencies.
+
+---------------------------------------------------------------------------
+1. PREREQUISITES
+---------------------------------------------------------------------------
+- C++17 compiler  (g++ 9+, clang++ 10+, or Apple Clang 12+)
+- CMake 3.16+     (optional — see "Quick Build" below for a one-liner)
+
+Check that they're installed:
+    g++ --version
+    cmake --version
+
+If missing:
+  Ubuntu/Debian : sudo apt update && sudo apt install build-essential cmake
+  macOS         : xcode-select --install && brew install cmake
+  Windows       : install Git, CMake, and MinGW-w64  (or use WSL)
+
+---------------------------------------------------------------------------
+2. GET THE CODE
+---------------------------------------------------------------------------
+    git clone https://github.com/AbhigyanSinha466/CVMplusplus.git
+    cd CVMplusplus
+
+---------------------------------------------------------------------------
+3. BUILD (CMake — recommended)
+---------------------------------------------------------------------------
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Release
+    cmake --build . --parallel
+
+The binary is at:  build/cvm   (or build\cvm.exe on Windows)
+
+QUICK BUILD (without CMake):
+    g++ -std=c++17 -O2 -Wall src/*.cpp -o cvm
+
+---------------------------------------------------------------------------
+4. RUN A SCRIPT
+---------------------------------------------------------------------------
+From inside the build/ directory:
+
+    ./cvm ../tests/factorial.cvm        # run a script
+    ./cvm -d ../tests/factorial.cvm     # DEBUG: print tokens + AST + bytecode
+    ./cvm                               # launch interactive REPL
+    ./cvm --help                        # full usage info
+
+The -d flag is the recommended way to demonstrate the full pipeline —
+it prints the tokens produced by the Lexer, the AST built by the Parser,
+the bytecode emitted by the Compiler, then runs the program on the VM.
+
+---------------------------------------------------------------------------
+5. INCLUDED SAMPLE PROGRAMS  (tests/)
+---------------------------------------------------------------------------
+    hello.cvm         — Hello-world / literals
+    arithmetic.cvm    — Arithmetic operators + precedence
+    factorial.cvm     — Iterative factorial via while-loop
+    fibonacci.cvm     — First 10 Fibonacci numbers
+    fizzbuzz.cvm      — FizzBuzz 1..20 with nested if/else
+    booleans.cvm      — Boolean logic and comparison operators
+    input_demo.cvm    — Interactive I/O with the `input` keyword
+    truthmachine.cvm  — Truth machine (input 0 -> print 0; else print 1 forever)
+    calculator.cvm    — Two-operand calculator: (a) (b) (op:1=+,2=-,3=*,4=/,5=%)
+
+---------------------------------------------------------------------------
+6. EXAMPLE: TRUTH MACHINE
+---------------------------------------------------------------------------
+    $ ./cvm ../tests/truthmachine.cvm
+    > 0
+    0
+
+    $ ./cvm ../tests/truthmachine.cvm
+    > 1
+    1
+    1
+    1
+    ... (Ctrl+C to stop)
+
+---------------------------------------------------------------------------
+7. EXAMPLE: CALCULATOR
+---------------------------------------------------------------------------
+Enter three integers when prompted: operand a, operand b, op code.
+Op codes:  1 = add   2 = sub   3 = mul   4 = div   5 = mod
+
+    $ ./cvm ../tests/calculator.cvm
+    > 15
+    > 27
+    > 1
+    42
+
+---------------------------------------------------------------------------
+8. RUN ALL BUILT-IN TESTS  (optional)
+---------------------------------------------------------------------------
+From the build/ directory:
+    ctest --output-on-failure
+
+---------------------------------------------------------------------------
+LANGUAGE QUICK REFERENCE
+---------------------------------------------------------------------------
+  Data types : Integer (64-bit signed), Boolean
+  Operators  : + - * / %        (arithmetic)
+               == != < <= > >=  (comparison, produce Boolean)
+  Variables  : let x = 10;      (declare)
+               x = x + 1;       (reassign — no `let`)
+  Control    : if (cond) { ... } else { ... }
+               while (cond) { ... }
+  I/O        : print expr;      (print a value)
+               let x = input;   (read an integer from stdin)
+  Comments   : // single-line
